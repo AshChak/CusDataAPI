@@ -28,10 +28,10 @@ namespace CustomerDataAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDbContext<CustomerDBContext>(a => a.UseSqlServer(Configuration.GetConnectionString("CustomerDataDB")));
+            services.AddDbContext<CustomerDBContext>(a => a.UseSqlServer(Configuration.GetConnectionString("CusDataDB")));
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "CustomerDataAPI", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "CusDataAPI", Version = "v1" });
             });
         }
 
